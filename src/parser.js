@@ -98,6 +98,7 @@ function buildPost(data) {
 		isDraft: data.childValue('status') === 'draft',
 		slug: decodeURIComponent(data.childValue('post_name')),
 		date: getPostDate(data),
+		modifiedDate: data.optionalChildValue('post_modified'),
 		coverImageId: getPostMetaValue(data, '_thumbnail_id'),
 
 		// these are possibly set later in mergeImagesIntoPosts()

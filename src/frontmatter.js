@@ -39,6 +39,11 @@ export function id(post) {
 	return parseInt(post.id);
 }
 
+export function modifiedDate(post) {
+	// previously parsed as a raw string (e.g. "2013-12-09 06:24:33"), may be undefined
+	return post.modifiedDate;
+}
+
 export function slug(post) {
 	// previously parsed and decoded
 	return post.slug;
